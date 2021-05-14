@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DA94C03-B897-4485-802A-A2699D041179}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Appplication</RootNamespace>
+    <AssemblyName>Appplication.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Assistents\TabelaImposto.cs" />
+    <Compile Include="Controller\BankController.cs" />
+    <Compile Include="Controller\BaseUnitController.cs" />
+    <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\CityController.cs" />
+    <Compile Include="Controller\CompanyController.cs" />
+    <Compile Include="Controller\CompanyTypeController.cs" />
+    <Compile Include="Controller\CompositionController.cs" />
+    <Compile Include="Controller\CompositionProductsController.cs" />
+    <Compile Include="Controller\ConfigCurrentAccountController.cs" />
+    <Compile Include="Controller\CountryController.cs" />
+    <Compile Include="Controller\CurrentAccountMovmentsController.cs" />
+    <Compile Include="Controller\CurrentAccountSystemController.cs" />
+    <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="Controller\FamilyController.cs" />
+    <Compile Include="Controller\FamilyRestController.cs" />
+    <Compile Include="Controller\InvoiceController.cs" />
+    <Compile Include="Controller\InvoiceNoteOperationController.cs" />
+    <Compile Include="Controller\InvoiceNoteReasonController.cs" />
+    <Compile Include="Controller\InvoiceTypeController.cs" />
+    <Compile Include="Controller\MovmentTypeController.cs" />
+    <Compile Include="Controller\PaymentMechanismController.cs" />
+    <Compile Include="Controller\PaymentsRecibosController.cs" />
+    <Compile Include="Controller\PermissionController.cs" />
+    <Compile Include="Controller\PrinterController.cs" />
+    <Compile Include="Controller\ProductRetreatController.cs" />
+    <Compile Include="Controller\ProductSalesController.cs" />
+    <Compile Include="Controller\ProductController.cs" />
+    <Compile Include="Controller\ProductEntryController.cs" />
+    <Compile Include="Controller\ProductsSelectedSellController.cs" />
+    <Compile Include="Controller\ProductsSelectedTableController.cs" />
+    <Compile Include="Controller\ProductTypeController.cs" />
+    <Compile Include="Controller\ProviderController.cs" />
+    <Compile Include="Controller\ReciboController.cs" />
+    <Compile Include="Controller\ReserveController.cs" />
+    <Compile Include="Controller\SerieController.cs" />
+    <Compile Include="Controller\StockController.cs" />
+    <Compile Include="Controller\StorageController.cs" />
+    <Compile Include="Controller\TableController.cs" />
+    <Compile Include="Controller\TaxCodeController.cs" />
+    <Compile Include="Controller\TaxReasonExemptionController.cs" />
+    <Compile Include="Controller\TaxTypeController.cs" />
+    <Compile Include="Controller\TurnoController.cs" />
+    <Compile Include="Controller\TypeController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statics\ConverteParaExtenso.cs" />
+    <Compile Include="Statics\preencherDadosSaft.cs" />
+    <Compile Include="Statics\SystemInfoCurrent.cs" />
+    <Compile Include="Statics\Methods.cs" />
+    <Compile Include="Statics\TurnoCurrent.cs" />
+    <Compile Include="Statics\UserCurrent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Domain\Domain.Domain.csproj">
+      <Project>{bd60dcec-373c-4d12-b9c5-1546ee5ef77f}</Project>
+      <Name>Domain.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Data\Infrastructure.Data.csproj">
+      <Project>{dd734573-ac32-4a57-93c5-5222865d391a}</Project>
+      <Name>Infrastructure.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD60DCEC-373C-4D12-B9C5-1546EE5EF77F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Domain.Domain</RootNamespace>
+    <AssemblyName>Domain.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Assistants\City.cs" />
+    <Compile Include="Entities\Assistants\CompanyType.cs" />
+    <Compile Include="Entities\Assistants\SystemEntities.cs" />
+    <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\Company.cs" />
+    <Compile Include="Entities\Documents\ConfigCurrentAccount.cs" />
+    <Compile Include="Entities\Documents\InvoiceNoteOperationType.cs" />
+    <Compile Include="Entities\Documents\InvoiceNoteReason.cs" />
+    <Compile Include="Entities\Documents\InvoiceStatus.cs" />
+    <Compile Include="Entities\Documents\InvoiceType.cs" />
+    <Compile Include="Entities\Documents\PaymentsRecibos.cs" />
+    <Compile Include="Entities\Documents\ProductEntry.cs" />
+    <Compile Include="Entities\Documents\Invoice.cs" />
+    <Compile Include="Entities\Documents\PaymentMechanism.cs" />
+    <Compile Include="Entities\Documents\ProductRetreat.cs" />
+    <Compile Include="Entities\Documents\ProductSales.cs" />
+    <Compile Include="Entities\Documents\Recibo.cs" />
+    <Compile Include="Entities\Documents\Series.cs" />
+    <Compile Include="Entities\Documents\SourceBilling.cs" />
+    <Compile Include="Entities\Family.cs" />
+    <Compile Include="Entities\FamilyRest.cs" />
+    <Compile Include="Entities\Financial\Bank.cs" />
+    <Compile Include="Entities\Financial\CurrentAccountMovments.cs" />
+    <Compile Include="Entities\Financial\CurrentAccountSystem.cs" />
+    <Compile Include="Entities\Financial\MovmentType.cs" />
+    <Compile Include="Entities\OTable.cs" />
+    <Compile Include="Entities\Permission.cs" />
+    <Compile Include="Entities\Printer.cs" />
+    <Compile Include="Entities\ProductAssistant\Category.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\ProductAssistant\Composition.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\ProductAssistant\CompositionProducts.cs" />
+    <Compile Include="Entities\ProductAssistant\TaxCode.cs" />
+    <Compile Include="Entities\ProductAssistant\ProductType.cs" />
+    <Compile Include="Entities\ProductAssistant\BaseUnit.cs" />
+    <Compile Include="Entities\ProductAssistant\TaxReasonExemption.cs" />
+    <Compile Include="Entities\ProductAssistant\TaxType.cs" />
+    <Compile Include="Entities\ProductStock\Stock.cs" />
+    <Compile Include="Entities\Provider.cs" />
+    <Compile Include="Entities\ProductStock\Storage.cs" />
+    <Compile Include="Entities\Room.cs" />
+    <Compile Include="Entities\SystemInfo.cs" />
+    <Compile Include="Entities\Table.cs" />
+    <Compile Include="Entities\Temp\ProductSellectedTable.cs" />
+    <Compile Include="Entities\Temp\ProductsSelectedSell.cs" />
+    <Compile Include="Entities\Temp\Reserve.cs" />
+    <Compile Include="Entities\Temp\TablesOcupad.cs" />
+    <Compile Include="Entities\Temp\Turno.cs" />
+    <Compile Include="Entities\Type.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Interfaces\Repositories\Assistants\ISystemEntitiesRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IConfigCurrentAccountRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IInvoiceNoteOperationTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IInvoiceNoteReasonRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IInvoiceStatus.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IPaymentsRecibos.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IProductReatretRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IRecibo.cs" />
+    <Compile Include="Interfaces\Repositories\Financial\IBankRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Financial\ICurrentAccountSystemRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IFamily.cs" />
+    <Compile Include="Interfaces\Repositories\IFamilyRestRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPrinter.cs" />
+    <Compile Include="Interfaces\Repositories\IRemission.cs" />
+    <Compile Include="Interfaces\Repositories\ISystemInfoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITableRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IType.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\ITaxReasonExemption.cs" />
+    <Compile Include="Interfaces\Repositories\Temp\IProductsSelectedTableRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Temp\IReserveTable.cs" />
+    <Compile Include="Interfaces\Repositories\Temp\ITurno.cs" />
+    <Compile Include="Interfaces\Repositories\UnitWork\IRepositoryManager.cs" />
+    <Compile Include="Interfaces\Repositories\UnitWork\IUnitOfWork.cs" />
+    <Compile Include="Interfaces\Repositories\Assistants\ICityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Assistants\ICompanyTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IInvoiceTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IProductEntryRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IInvoiceRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IPaymentMechanismRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\IProductSalesRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Documents\ISeriesRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICompanyRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICountry.cs" />
+    <Compile Include="Interfaces\Repositories\ICustomerRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProductRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProviderRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\IBaseUnitRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\ICategoryRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\ICompositionProductsRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\ICompositionRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\IProductTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\ITaxCodeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductAssistant\ITaxTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductStock\IStockRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ProductStock\IStorageRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Temp\IProductsSelectedSellRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saft\AuditFile.cs" />
+    <Compile Include="Saft\MetodosSaft.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
